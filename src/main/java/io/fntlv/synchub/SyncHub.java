@@ -1,14 +1,11 @@
 package io.fntlv.synchub;
 
-import org.bukkit.Bukkit;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class SyncHub extends JavaPlugin implements Listener {
+public final class SyncHub extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(this,this);
 
     }
 
