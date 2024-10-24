@@ -2,9 +2,6 @@ package io.fntlv.synchub.data.ecore;
 
 import br.com.finalcraft.evernifecore.config.playerdata.PlayerController;
 import br.com.finalcraft.finaleconomy.config.data.FEPlayerData;
-import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
-import io.fntlv.synchub.SyncHub;
 import io.fntlv.synchub.api.data.ISerializableData;
 
 import java.util.UUID;
