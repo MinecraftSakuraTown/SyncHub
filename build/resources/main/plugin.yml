@@ -1,3 +1,5 @@
 name: SyncHub
 version: '1.0.0'
 main: io.fntlv.synchub.SyncHub
+depend: [ EverNifeCore ]
+authors: [ FnTlv ]
