@@ -10,7 +10,6 @@ import io.fntlv.synchub.api.data.ISerializableData;
 import java.util.UUID;
 
 public class FEData implements ISerializableData {
-    private final Gson gson = new Gson();
 
     @Override
     public String serialize(UUID uuid) {
@@ -20,13 +19,9 @@ public class FEData implements ISerializableData {
 
     @Override
     public void deserialize(String data, UUID uuid) {
-        try {
-            FEPlayerData pdSection = PlayerController.getPDSection(uuid, FEPlayerData.class);
-            pdSection.setMoney(Double.parseDouble(data));
-            pdSection.savePDSection();
-        } catch (JsonSyntaxException e) {
-            SyncHub.warn("Failed to deserialize FinalEconomy data for UUID " + uuid + ": " + e.getMessage());
-        }
+        FEPlayerData pdSection = PlayerController.getPDSection(uuid, FEPlayerData.class);
+        pdSection.setMoney(Double.parseDouble(data));
+        pdSection.savePDSection();
     }
 
     @Override
