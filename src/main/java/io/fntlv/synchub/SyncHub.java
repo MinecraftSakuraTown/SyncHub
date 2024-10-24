@@ -63,7 +63,7 @@ public final class SyncHub extends JavaPlugin {
         DataSyncRegistry.create(DataSyncRegistry.Type.MOD_DATA, ModDataAPIInvoker.getModDataApiClassName())
                 .addSerializableData(new ModData())
                 .register();
-        DataSyncRegistry.create(DataSyncRegistry.Type.PLUGIN_DATA, FinalEconomy.instance.getName())
+        DataSyncRegistry.create(DataSyncRegistry.Type.PLUGIN_DATA, "FinalEconomy")
                 .addSerializableData(new FEData())
                 .register();
     }
